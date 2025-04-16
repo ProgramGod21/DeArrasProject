@@ -1,0 +1,379 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='14px'%3E1%3C/text%3E%3Ctext x='25%25' y='25%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='14px'%3E0%3C/text%3E%3Ctext x='75%25' y='75%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='14px'%3E1%3C/text%3E%3Ctext x='25%25' y='75%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='14px'%3E0%3C/text%3E%3Ctext x='75%25' y='25%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='14px'%3E1%3C/text%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav a.active {
+    background-color: #555;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+}
+
+.hero-header {
+    height: 100vh;
+    width: 100%;
+    background-image: url('Mcnair.jpg'); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-header h2 {
+    font-size: 2rem;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-card {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    background-color: #f0f0f0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.skill-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.progress {
+    background-color: #4CAF50;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+/* About Page */
+.about-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.profile-photo {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Resume Page */
+.resume-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.job, .project, .degree {
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-photo {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Comment Section Styles */
+.comment-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Dino Game Styles */
+.game-section {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.game-section h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#game-container {
+    width: 600px;
+    height: 150px;
+    margin: 20px auto;
+    position: relative;
+    background: #f7f7f7;
+    border: 2px solid #333;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#dino {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+#obstacle {
+    width: 20px;
+    height: 30px;
+    background-color: #ff0000;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+}
+
+#game-start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.jump {
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 80px; }
+    100% { bottom: 0; }
+}
+
+@keyframes moveObstacle {
+    from { right: -20px; }
+    to { right: 100%; }
+}
+
+/* Add these styles for parallel sections */
+.parallel-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Update existing sections to fit the new layout */
+.skills, .comment-section {
+    width: 100%;
+}
+
+/* Make the skills container stack vertically */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 968px) {
+    .parallel-sections {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Update rocket styles */
+.rocket {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    z-index: 10;
+    opacity: 0;
+    animation: rocketAppear 0.5s forwards;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.rocket svg {
+    transform: rotate(45deg);
+    filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.5));
+}
+
+@keyframes rocketAppear {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Add bounce text effect */
+.bounce-text {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.bounce-text.bounce {
+    animation: textBounce 0.5s ease;
+}
+
+@keyframes textBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Add flame animation */
+.flame {
+    animation: flicker 0.1s infinite alternate;
+}
+
+@keyframes flicker {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* Update hero header for positioning context */
+.hero-header {
+    position: relative;
+    overflow: hidden;
+} 
